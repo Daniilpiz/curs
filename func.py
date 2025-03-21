@@ -117,7 +117,7 @@ def fill_matrix(Mat:np.array, dim:tuple, choic:int)->np.array:
 
 def solve(var:int,M1:np.array, M2:np.array ,M3:np.array, SOLVED:np.array):
     if var ==3:
-        return solved3(var,M1,M2,M3,SOLVED)
+        return solved3(M1,M2,M3,SOLVED)
     else:
         return solved12(var,M1,M2,SOLVED)
 
@@ -167,7 +167,7 @@ X = B*A^(-1)
         except:
             print("Ошибка произведения матриц, вероятно размерности матриц не совпадают")
 
-def solved3(var:int, M1:np.array, M2:np.array ,M3:np.array, SOLVED:np.array)->np.array:
+def solved3(M1:np.array, M2:np.array ,M3:np.array, SOLVED:np.array)->np.array:
 
 
     '''
