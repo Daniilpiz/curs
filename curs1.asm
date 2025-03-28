@@ -28,6 +28,13 @@ main proc
   mov  qword ptr [rsp + 32], 0
   call WriteFile
 
+  mov  rcx, rax
+  lea  rdx, indent
+  mov  r8d, 4      ; Длина отступа (4 пробела)
+  xor  r9, r9
+  mov  qword ptr [rsp + 32], 0
+  call WriteFile
+
   ; Вывод текста
   mov  rcx, -11  ; Аргумент для GetStdHandle - STD_OUTPUT
   call GetStdHandle ; вызываем функцию GetStdHandle
