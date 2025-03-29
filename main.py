@@ -28,6 +28,7 @@ def main():
     Главная функция
     """
     #функция для меню
+    menu()
 
     variant = input_int_in_range(start=1, end=4)
     
@@ -118,4 +119,12 @@ if __name__=="__main__":
 
     """
     #функция для заставки
-    main()
+    zastavka()
+    while True:
+        v = input("Продолжить или выйти из программы (Y/N): ")
+        if v.lower() == "y":
+            main()
+            break  # Выход из цикла после успешного выполнения main()
+        elif v.lower() == "n":
+            sys.exit(0)
+        else:print("Некорректный ввод. Пожалуйста, введите 'Y' или 'N'.")
