@@ -27,7 +27,7 @@ def main():
     """
     Главная функция
     """
-    zastavka()
+    #функция для меню
 
     variant = input_int_in_range(start=1, end=4)
     
@@ -115,5 +115,7 @@ def main():
 if __name__=="__main__":
     """
     Точка входа в программу
+
     """
+    #функция для заставки
     main()
