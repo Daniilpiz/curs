@@ -109,6 +109,7 @@ def main():
 
 
     X = solve(variant, A, B, C, X)
+    print(A.dtype)
     result_in_file = "результат.txt"
     history_in_file = "история.txt"
     write_to_files(history_in_file,result_in_file ,variant,A,B,C,X)
